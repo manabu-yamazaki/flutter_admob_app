@@ -1,0 +1,90 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+*.freezed.dart
+*.g.dart
+
+### Dartツール ###
+.dart_server/
+
+### 依存関係ファイル ###
+/packages
+.packages
+
+### Flutterプロジェクト固有 ###
+**/*.lock
+**/flutter_export_environment.sh
+**/.flutter-plugins-dependencies
+**/.flutter-plugins
+**/.generated_plugin_registrant.dart
+
+### 個人設定ファイル ###
+**/.idea/
+
+### 一時ファイル ###
+**/*.tmp
+**/*.swp
+**/*.log
+
+### その他 ###
+**/*.bak
+**/*.orig
+
+### AndroidおよびiOS固有の項目 ###
+### iOS ###
+/ios/Flutter/.last_build_id
+/ios/.symlinks/
+/ios/Flutter/flutter_export_environment.sh
+/ios/Flutter/Generated.xcconfig
+
+### Android ###
+/android/.gradle/
+/android/.idea/
+/android/**/*.jks
