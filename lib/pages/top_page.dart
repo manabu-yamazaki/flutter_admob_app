@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_admob_app/model/button_navigation.dart';
+import 'package:flutter_admob_app/pages/point_list_page.dart';
+import 'package:flutter_admob_app/pages/watch_video_page.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({super.key, required this.title});
@@ -11,39 +14,35 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  int _counter = 0;
+  List<ButtonNavigationEntity> navigationList = [
+    ButtonNavigationEntity(title: 'ポイント獲得', icon: Icons.control_point_duplicate, page: const PointListPage()),
+    ButtonNavigationEntity(title: 'ブースト', icon: Icons.trending_up, page: const WatchVideoPage()),
+  ];
+  int selectedIndex = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  // int _counter = 0;
+
+  // void _incrementCounter() {
+  //   setState(() {
+  //     _counter++;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      body: navigationList[selectedIndex].page,
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex,
+        onTap: (int newIndex) {
+          setState(() {
+            selectedIndex = newIndex;
+          });
+        },
+        items: navigationList.map((item) => BottomNavigationBarItem(
+          icon: Icon(item.icon),
+          label: item.title,
+          )).toList(),
       ),
     );
   }

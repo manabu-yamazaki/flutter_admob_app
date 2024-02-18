@@ -5,6 +5,9 @@ void main() {
   runApp(const MyApp());
 }
 
+int totalPoint = 0;
+bool isMultiply = false;
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
