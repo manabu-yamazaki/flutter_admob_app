@@ -17,3 +17,24 @@ samples, guidance on mobile development, and a full API reference.
 
 # AdMob
 https://admob.google.com/intl/ja/home/
+
+# Dart Package
+https://pub.dev/
+
+Android App ID
+ca-app-pub-1993135110642374~1009848194
+Android 広告バナーID
+ca-app-pub-1993135110642374/9730453079
+Android
+ca-app-pub-1993135110642374/4993131719
+Android App リワード広告
+ca-app-pub-1993135110642374/9916131819
+
+iOS App ID
+ca-app-pub-1993135110642374~2092647969
+iOS App 広告バナーID
+ca-app-pub-1993135110642374/6689356760
+iOS App 
+ca-app-pub-1993135110642374/9481017544
+iOS App リワード広告
+ca-app-pub-1993135110642374/8437552709
